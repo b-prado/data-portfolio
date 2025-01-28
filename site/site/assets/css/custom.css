@@ -1,0 +1,40 @@
+/* 1. Compact Navigation Panel */
+.md-sidebar--primary {
+    width: auto; /* Keeps it compact */
+    max-width: 200px; /* Maximum width to maintain compactness */
+    word-wrap: break-word; /* Break long titles into multiple lines */
+}
+
+/* 2. Table of Contents Panel (Auto-Adjust) */
+.md-sidebar--secondary {
+    width: auto; /* Dynamically adjusts based on content */
+    max-width: 300px; /* Optional: Set a maximum width for consistency */
+}
+
+/* 3. Main Content Area (Dynamic Adjustment) */
+.md-content {
+    margin-left: calc(var(--md-sidebar-width, 0) + 10px); /* Dynamically adjust for the primary panel */
+    margin-right: calc(var(--md-sidebar-width, 0) + 10px); /* Dynamically adjust for the TOC panel */
+}
+
+/* 4. Collapsible Panels for Small Screens */
+@media (max-width: 768px) {
+    .md-sidebar--primary,
+    .md-sidebar--secondary {
+        display: none; /* Hide panels by default on smaller screens */
+    }
+
+    /* Allow expandable panels */
+    body.sidebar--primary-open .md-sidebar--primary,
+    body.sidebar--secondary-open .md-sidebar--secondary {
+        display: block;
+        width: 200px; /* Optional: Set width for expandability */
+    }
+}
+
+/* 5. Expandable Panels */
+.md-sidebar-toggle {
+    display: block; /* Ensure toggle buttons are visible */
+    cursor: pointer;
+    margin: 10px; /* Optional: Add some spacing for aesthetics */
+}
