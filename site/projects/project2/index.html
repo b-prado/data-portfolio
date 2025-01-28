@@ -1,0 +1,825 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../project1/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Tag Analysis - Bruno Prado - Data Analytics Portfolio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#task-two-recipe-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Bruno Prado - Data Analytics Portfolio" class="md-header__button md-logo" aria-label="Bruno Prado - Data Analytics Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bruno Prado - Data Analytics Portfolio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tag Analysis
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Bruno Prado - Data Analytics Portfolio" class="md-nav__button md-logo" aria-label="Bruno Prado - Data Analytics Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Bruno Prado - Data Analytics Portfolio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects and Skills
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projects and Skills
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Task One
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project3/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tag Analysis
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tag Analysis
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-insights-and-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Insights and Recommendations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Insights and Recommendations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tag-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tag Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numeric-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numeric Values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Visualization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Visualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numeric-values_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numeric Values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorical-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Categorical Values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-insights-and-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Insights and Recommendations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Insights and Recommendations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tag-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tag Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numeric-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numeric Values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Visualization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Visualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numeric-values_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numeric Values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorical-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Categorical Values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="task-two-recipe-data">Task Two - Recipe Data</h1>
+<h2 id="introduction">Introduction</h2>
+<p>One of the main parts of our app is the recipe tab that allows users with a subscription to view
+numerous recipes provided by the recipe team. Users can search for recipes, view preparation
+details and save recipes as favorites. The recipe team wonders whether there are features that
+distinguish successful recipes from less successful recipes and asks for your help.
+You are provided with an aggregated data set containing data on the recipes viewed by the
+users. Some of the fields contain text, for example recipe title, description, instructions, etc.
+related to the recipe.</p>
+<hr />
+<h2 id="key-insights-and-recommendations">Key Insights and Recommendations</h2>
+<h3 id="tag-analysis">Tag Analysis</h3>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Keywords balance (recipes volume vs view average)</strong></p>
+<p>There are some tags with high average and low volume:</p>
+<div class="codehilite"><pre><span></span><code>shake, smoothie, soup, casserole, ketogenic, 50kcal, basic, high_protein, fish
+</code></pre></div>
+
+<p>On the other hand, there are tags with low average and high volume:</p>
+<div class="codehilite"><pre><span></span><code>vegetarian, vegan, lactose_free, gluten_free, easy, sugar_free
+</code></pre></div>
+
+<p>Please check the "Tree Chart" to know more.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Recommendation</p>
+<p>Try to create new recipes exploring more the first group. The second group is more saturated and chances are they will bring less views.</p>
+<p>Check the recipes from the first group to understand their success and inspire the creation of new recipes.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Tags effect with Statistical Significance Analysis</strong></p>
+<p>There are tags that can affect (positively or negatively) the average of views of a recipe with statistical signficance.
+Please go to the section ANOVA to see the data.</p>
+<p>Tags with positive impact:</p>
+<div class="codehilite"><pre><span></span><code>low_carb,low_calorie, low_fat,high_protein,meat,
+casserole, shake, few_ingredients, fast, breakfast, 300kcal
+</code></pre></div>
+
+<p>Tags with negative impact:</p>
+<div class="codehilite"><pre><span></span><code>pescatarian, vegan, lactose_free, high_fiber, vegetables,
+salad, baking,easy, snack, on_the_go, 700kcal.
+</code></pre></div>
+
+<p>note: the difficulty level doesn't affect the views average.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Recommendation</p>
+<p>Even though this result has statistic significance, does not mean that the negative tags are absolutely forbidden and we can only create recipes using the positive tags.</p>
+<p>We should see it as a reflection of the users interest.</p>
+<p>The users may prefer:</p>
+<ul>
+<li>
+<p><code>low_fat</code>, <code>low_calorie</code>, <code>low_carb</code> diets instead of <code>pescatarian</code>, <code>vegan</code>, <code>lactose_free</code> diets.</p>
+</li>
+<li>
+<p><code>Meat</code> rather than <code>vegetables</code></p>
+</li>
+<li>
+<p><code>Casserole</code>, <code>shake</code>, rather than <code>salad</code> and <code>baked</code> recipes.</p>
+</li>
+<li>
+<p><code>Fast</code> recipes with <code>few ingredients</code></p>
+</li>
+<li>
+<p><code>Breakfast</code> instead of other meal time. Maybe because they already know the basics for the lunch, but they would like to have options for breakfast beyond plain eggs. </p>
+</li>
+<li>
+<p><code>Lower</code> calories recipes because people are focused on loosing weight.</p>
+</li>
+</ul>
+</div>
+<h3 id="numeric-values"><strong>Numeric Values</strong></h3>
+<ul>
+<li><strong>Preparation time</strong>: Recipes with longer preparation time have lower views.</li>
+<li><strong>Number of steps</strong>:The top 9 recipes in terms of views have from 4 to 6 steps.</li>
+<li><strong>Number of tags</strong>:The most viewed recipes have usually from 7 to 13 tags.</li>
+<li><strong>Correlation</strong>: the three metrics above are bad predictors for views (low correlation)</li>
+</ul>
+<div class="admonition abstract">
+<p class="admonition-title">Recommendation</p>
+<ul>
+<li>Avoid creating overcomplicated recipes (many steps)</li>
+<li>Recipes linked to few tags are "too simple", aim the sweet spot (4 to 6)</li>
+</ul>
+</div>
+<hr />
+<h2 id="data-visualization">Data Visualization</h2>
+<h3 id="numeric-values_1">Numeric Values</h3>
+<details class="note">
+<summary>ScatterPlots</summary>
+<p>Below are the scatter plots showing the relationships between <code>No Hits</code> and various features:</p>
+<ol>
+<li><strong>Preparation Time vs No Hits</strong>: Shows how preparation time correlates with hits.</li>
+<li><strong>Steps vs No Hits</strong>: Highlights the impact of steps on hits.</li>
+<li><strong>No Tags vs No Hits</strong>: Examines the role of tags in influencing hits.</li>
+</ol>
+<p><img alt="Scatter Plots" src="scatterplots.png" /></p>
+<ul>
+<li>Recipes with longer preparation time have lower views.</li>
+<li>The top 9 recipes in terms of views have from 4 to 6 steps.</li>
+<li>The most viewed recipes have usually from 7 to 13 tags.</li>
+</ul>
+</details>
+<details class="note">
+<summary>Histogram</summary>
+<p><img alt="Scatter Plots" src="histograms.png" /></p>
+</details>
+<details class="note">
+<summary>Correlation</summary>
+<p>Only weak correlations detected.
+<img alt="Scatter Plots" src="correlation_matrix.png" /></p>
+</details>
+<details class="note">
+<summary>PPScore</summary>
+<p><strong>No Predictive Power (PPS = 0)</strong>: Features (preparationtime, steps, no_tags) show no predictive relationship with no_hits.<br>
+The Decision Tree Regressor performs no better than a baseline (mean prediction). <br><br>
+<strong>Model Performance</strong>: Baseline and model errors are similar, indicating that these features do not explain variance in no_hits.<br><br>
+<strong>Business Implications</strong>:
+Current features do not effectively predict no_hits.
+The analysis suggests either insufficient feature relevance or weak data patterns.</p>
+</details>
+<h3 id="categorical-values">Categorical Values</h3>
+<p>The tags are grouped by similarity to help in the further analysis.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Group</strong></th>
+<th><strong>Tags</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dietary Preferences</td>
+<td>vegetarian, vegan, pescatarian, lactose_free, gluten_free, low_carb, ketogenic, low_fat, low_calorie</td>
+</tr>
+<tr>
+<td>Meal Type</td>
+<td>lunch, dinner, breakfast, snack, on_the_go, dessert</td>
+</tr>
+<tr>
+<td>Calories (kcal)</td>
+<td>50kcal, 100kcal, 200kcal, 300kcal, 400kcal, 500kcal, 600kcal, 700kcal</td>
+</tr>
+<tr>
+<td>Type of Food</td>
+<td>fruits, vegetables, meat, fish</td>
+</tr>
+<tr>
+<td>Cooking Style</td>
+<td>baking, salad, soup, casserole, smoothie, shake</td>
+</tr>
+<tr>
+<td>Nutritional Focus</td>
+<td>high_protein, high_fiber, detox, clean_eating</td>
+</tr>
+<tr>
+<td>Flavor Profile</td>
+<td>sweet, sugar_free</td>
+</tr>
+<tr>
+<td>Occasions</td>
+<td>christmas</td>
+</tr>
+<tr>
+<td>Complexity/Convenience</td>
+<td>easy, basic, fast, few_ingredients</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title"><strong>Tree Chart - Keywords balance</strong></p>
+<p>The size is the average views, the color is the number of recipes for each tag:</p>
+<p>(you can interact with the chart clicking with the mouse)</p>
+<p><iframe src="treemap_recipes_tags.html" width="100%" height="800px" frameborder="0"></iframe></p>
+<ul>
+<li>
+<p>There are some tags with high average and low volume, we could create more recipes using them:</p>
+<ul>
+<li>Shake, smoothie, soup, casserole, ketogenic, 50kcal, basic, high_protein, fish</li>
+</ul>
+</li>
+<li>
+<p>On the other hand, there are tags with high volume and low average, which we should avoid using for new recipes:</p>
+<ul>
+<li>vegetarian, vegan, lactose_free, gluten_free, easy, sugar_free</li>
+</ul>
+</li>
+</ul>
+</div>
+<details class="note">
+<summary>Boxplot</summary>
+<p>Please check the jupyter notebook.</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">ANOVA for groups</p>
+<p>I applied ANOVA for each tag against the group to verify if there is an effect on views average and if the result is statistically significant.</p>
+<p>The number represents the effect on the views average:</p>
+<blockquote>
+<p><code>avg views for recipes with the tag</code> - <code>avg views for the other recipes in the same group</code></p>
+</blockquote>
+<p>Legend:</p>
+<ul>
+<li>
+<p>Green: positive impact with statistic significance.</p>
+</li>
+<li>
+<p>Red: negative impact with statistic significance.</p>
+</li>
+<li>
+<p>Grey: No statistic significance.</p>
+</li>
+</ul>
+<p><img alt="ANOVA Groups" src="anova_groups.png" /></p>
+</div>
+<details class="note">
+<summary>Styled Groups Table</summary>
+<p>Below is the styled DataFrame showing aggregated statistics for no_hits (views):</p>
+<p><iframe src="styled_groups_table.html" width="100%" height="1000px" frameborder="0"></iframe></p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
