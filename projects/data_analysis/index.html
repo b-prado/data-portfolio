@@ -16,7 +16,7 @@
     
     
       
-        <title>Attribution Model with Python - Bruno Prado - Data Analytics Portfolio</title>
+        <title>Analysis - Bruno Prado - Data Analytics Portfolio</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#attribution-model-with-python" class="md-skip">
+        <a href="#analysis" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Attribution Model with Python
+              Analysis
             
           </span>
         </div>
@@ -342,9 +342,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#problem-1" class="md-nav__link">
+  <a href="#case-1-campaign-perfomance-for-a-gaming-company" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem 1:
+      Case 1 - Campaign Perfomance for a Gaming Company:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-2-channel-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 2 - Channel Analysis:
     </span>
   </a>
   
@@ -360,27 +369,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#problem-2" class="md-nav__link">
+  <a href="#case-3-paid-marketing-campaign-data-channel-analysis-during-black-friday" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem 2:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#solution_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solution
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#analysis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Analysis
+      Case 3 - Paid Marketing Campaign Data, Channel Analysis during Black Friday:
     </span>
   </a>
   
@@ -410,58 +401,98 @@
                   
 
 
-<h1 id="attribution-model-with-python">Attribution Model with Python</h1>
-<h2 id="problem-1">Problem 1:</h2>
-<p>Analyze the multi-touch attribution using the <code>campaign_touchpoints.csv</code> dataset.</p>
-<p>The goal is to attribute the conversions to different marketing touchpoints effectively.</p>
-<p>1) Implement a linear attribution model where each touchpoint shares equal credit for a conversion.</p>
-<p>2) Calculate the attributed conversions for each channel.</p>
-<p>3) Calculate the attributed conversions for each campaign.</p>
+<h1 id="analysis">Analysis</h1>
+<p>[ ] Yazio Campaign</p>
+<h2 id="case-1-campaign-perfomance-for-a-gaming-company">Case 1 - Campaign Perfomance for a Gaming Company:</h2>
+<p>In the attached CSVs you’ll find information regarding the performance of our game’s campaigns. Inside of it, 
+you’ll find 7 campaigns that were active between 2024-01-10 and 2024-01-17. The following columns are 
+provided:</p>
+<details class="abstract">
+<summary>Columns</summary>
+<ul>
+<li>spend: Amount spent in the campaign</li>
+<li>impressions: Amount of impressions for that specific campaign</li>
+<li>clicks: Amount of clicks for that specific campaign during the period</li>
+<li>installs: Amount of installs for that specific campaign during the period</li>
+<li>f_revenue_d90: expected revenue to be observed after 90 days of installs</li>
+<li>revenue_d3: observed revenue at d3 since install</li>
+<li>retained_users_d1: Amount of users that were active after 1 day since the install</li>
+<li>retained_users_d3: Amount of users that were active after 3 days since the install</li>
+<li>retained_users_d7: Amount of users that were active after 7 days since the install</li>
+<li>payers_d1: Amount of users that paid at least once after 1 day since install</li>
+<li>payers_d3: Amount of users that paid at least once after 3 days since install</li>
+<li>payers_d7: Amount of users that paid at least once after 7 days since install</li>
+</ul>
+</details>
+<ol>
+<li>
+<p>Please compute the necessary metrics to assess the campaign's performance in UA and Product 
+terms.</p>
+<details class="success">
+<summary>Solution</summary>
+<p><img alt="campaign_metrics" src="campaign_metrics.png" /></p>
+</details>
+</li>
+<li>
+<p>What would be your recommendation for each campaign? Will you increase spend on some? Would you cut spend?</p>
+<details class="success">
+<summary>Solution</summary>
+<p><img alt="campaign_recommendations" src="campaign_recommendations.png" /></p>
+</details>
+</li>
+<li>
+<p>Where in the ad funnel (from impression to install in the store) are some of the campaigns 
+over-performing/under-performing?</p>
+<details class="success">
+<summary>Solution</summary>
+<p><img alt="campaign_recommendations_2" src="campaign_recommendations_2.png" /></p>
+</details>
+</li>
+</ol>
 <hr />
+<h2 id="case-2-channel-analysis">Case 2 - Channel Analysis:</h2>
+<p>The Chief Marketing Officer asked you to analyze visitors’ acquisition sources from a specific period (Oct’2021).
+Your task is to evaluate the performance of specific acquisition sources and - most importantly - give recommendations on the next actions we should take.</p>
+<p>The Data Team has already provided you with 3 .csv files you can use for this task:</p>
+<details class="abstract">
+<summary>projects_created.csv</summary>
+<ul>
+<li>PROJECT_ID – each business after registration is assigned a unique identifier called PROJECT_ID</li>
+<li>VISITOR_ID – a visitor’s unique id, it’s used to track visitors even before their signup</li>
+<li>PROJECT_REGISTRATION_DATETIME – the time a project was created</li>
+<li>PROJECT_PLATFORM – the platform the project was registered on (you can register a project directly on our website or, alternatively, use one of the platforms you create your websites on, e.g. (WordPress or Shopify)</li>
+<li>PROJECT_COUNTRY_ISO – a two-letter geocode based on a website’s location (ISO 3166-1 alpha-2)</li>
+<li>PROJECT_INDUSTRY – the industry code chosen by users during project registration</li>
+<li>SUBSCRIPTION_CREATED_DATE – the date when the first subscription within a project was created</li>
+<li>FIRST_CONTRACT_VALUE – the value of a subscription (in USD) - for the sake of this task let’s assume that the value doesn’t change during customers’ lifetimes once it’s been created. Also, for the sake of simplicity let’s assume that the current lifespan of a project is equal to 8 months.</li>
+</ul>
+</details>
+<details class="abstract">
+<summary>homepage_visits.csv</summary>
+<ul>
+<li>EVENT_DATETIME – datetime the homepage was visited</li>
+<li>VISITOR_ID – a visitor’s unique id</li>
+<li>ACQUISITION_CHANNEL – how the user entered our website and started the new session</li>
+</ul>
+</details>
+<details class="abstract">
+<summary>costs.csv</summary>
+<ul>
+<li>monthly cost (in USD) generated by each acquisition channel</li>
+</ul>
+</details>
+<p>As an output of your assignment, we would like you to prepare a short report containing your findings that could be potentially shown to internal stakeholders</p>
 <h2 id="solution">Solution</h2>
-<details class="success" open="open">
-<summary>Solution</summary>
-<p><a href="https://github.com/b-prado/data-portfolio/blob/main/attribution_model_multitouch.ipynb">Python - Jupyter Notebook</a></p>
-</details>
+<p><a href="https://docs.google.com/presentation/d/1P7xwSqK3YqcAcS7kCdAPorKdEYtueJUCXGQBmL95Knw/edit?usp=sharing">Presentation</a></p>
+<p><a href="https://github.com/b-prado/data-portfolio/blob/main/channel_analysis.ipynb">Python - Jupyter Notebook</a></p>
 <hr />
-<h2 id="problem-2">Problem 2:</h2>
-<p>Evaluate first touch, last touch and multi-touch attribution models using the <code>homepage_visits.csv</code> dataset.</p>
-<hr />
-<h2 id="solution_1">Solution</h2>
-<details class="success" open="open">
-<summary>Solution</summary>
-<p><a href="https://github.com/b-prado/data-portfolio/blob/main/attribution_models_comparison.ipynb">Python - Jupyter Notebook</a></p>
-<p><img alt="models_results" src="models_results.png" /></p>
-<h2 id="analysis"><strong>Analysis</strong></h2>
-<p><strong>Top Acquisition Channels</strong>:</p>
-<ul>
-<li>Channel 1 has the highest attribution credit (56,893.87), making it the dominant channel in the dataset.</li>
-<li>Channel 4 follows closely behind with 51,091.80 in attribution credit.</li>
-</ul>
-<p><strong>Discrepancies Between First-Touch and Last-Touch</strong>:</p>
-<ul>
-<li>Channel 8 has a significant shift (+4,398) from first-touch to last-touch, indicating it is more effective at closing conversions rather than initiating them.</li>
-<li>Channel 11 also shows a notable shift (+2,743), suggesting its role in finalizing conversions rather than early acquisition.</li>
-<li>Channel 2 and Channel 1 are relatively stable, meaning their role in conversions is more balanced across the funnel.</li>
-</ul>
-<p><strong>First-Touch vs. Attribution Credit</strong>:</p>
-<ul>
-<li>Channels 1, 4, and 2 have higher first-touch counts than their attributed credit, meaning these channels may be good at generating initial traffic but could be losing conversions later.</li>
-<li>Channels 8 and 11 have lower first-touch counts than their attribution credit, suggesting that they contribute more effectively in later-stage conversions.</li>
-</ul>
-<p><strong>Last-Touch vs. Attribution Credit</strong>:</p>
-<ul>
-<li>Channel 8 (+1,962) and Channel 11 (+896) have higher last-touch counts than their attribution credit, reinforcing their strong role in finalizing conversions.</li>
-<li>Channel 1 (-533) and Channel 4 (-1,504) have lower last-touch counts compared to attribution, indicating that their impact might be spread across multiple touchpoints instead of acting as the final interaction.</li>
-</ul>
-<p><strong>Recommendations</strong>:</p>
-<ul>
-<li>Optimize Early-Stage Channels (Channel 1, Channel 4, Channel 2): These channels drive strong initial engagement, so focus on improving retention and conversion strategies.</li>
-<li>Leverage Closing-Stage Channels (Channel 8, Channel 11): Since they perform well in the last touch, consider allocating budget for retargeting and remarketing campaigns.</li>
-<li>Analyze Attribution Models Further: The discrepancy between first-touch, last-touch, and linear attribution suggests deeper funnel insights can be explored. It would be interesting to analyze user's journeys to complement the analysis.</li>
-</ul>
-</details>
-<hr />
+<h2 id="case-3-paid-marketing-campaign-data-channel-analysis-during-black-friday">Case 3 - Paid Marketing Campaign Data, Channel Analysis during Black Friday:</h2>
+<p>Our Paid Marketing team is dedicated to engaging potential users for our app through targeted campaigns across various channels.
+<strong>The objective of these campaigns is to maximize app installations while maintaining a balanced consideration of financial implications.</strong>
+Users who sign up for a subscription within the app count as converted. The revenue generated by subscriptions must be set against the marketing spend.
+You are provided with a dataset that includes campaign data for five marketing channels and multiple countries for November 2023.</p>
+<p>Our paid marketing team is interested in an analysis for two of our focus regions: Germany and the USA.
+Please consider 3 relevant KPIs of your choice to evaluate the performance in the past November and provide recommendations for the next November.</p>
 <h2 id="navigation">Navigation</h2>
 <p><a href="../../">Previous: Home</a></p>
 
