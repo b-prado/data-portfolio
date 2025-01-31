@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sql" class="md-skip">
+        <a href="#dashboards" class="md-skip">
           Skip to content
         </a>
       
@@ -346,27 +346,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#problem-1-define-the-connections-between-the-described-tables-draw-an-erd" class="md-nav__link">
+  <a href="#looker-studio" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem 1: Define the connections between the described tables (draw an ERD)
+      Looker Studio
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#problem-2-write-queries-that-answer-the-following-questions" class="md-nav__link">
+  <a href="#powerbi" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem 2: Write queries that answer the following questions
+      PowerBI
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#problem-3-calculate-total-revenue-retention-cohort-analysis-and-cumulative-revenue-using-userscsv-and-user_activitiescsv" class="md-nav__link">
+  <a href="#tableau" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem 3: Calculate total revenue, retention cohort analysis and cumulative revenue using users.csv and user_activities.csv
+      Tableau
     </span>
   </a>
   
@@ -466,27 +466,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#problem-1-define-the-connections-between-the-described-tables-draw-an-erd" class="md-nav__link">
+  <a href="#looker-studio" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem 1: Define the connections between the described tables (draw an ERD)
+      Looker Studio
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#problem-2-write-queries-that-answer-the-following-questions" class="md-nav__link">
+  <a href="#powerbi" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem 2: Write queries that answer the following questions
+      PowerBI
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#problem-3-calculate-total-revenue-retention-cohort-analysis-and-cumulative-revenue-using-userscsv-and-user_activitiescsv" class="md-nav__link">
+  <a href="#tableau" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem 3: Calculate total revenue, retention cohort analysis and cumulative revenue using users.csv and user_activities.csv
+      Tableau
     </span>
   </a>
   
@@ -516,367 +516,68 @@
                   
 
 
-<h1 id="sql">SQL</h1>
-<p>This document contains problems related to:</p>
+<h1 id="dashboards"><strong>Dashboards</strong></h1>
+<h2 id="looker-studio"><strong>Looker Studio</strong></h2>
+<p>I created this dashboard to analyze <a href="https://lookerstudio.google.com/reporting/260d4bb4-9bce-40c5-a1c9-edf5651c90bc/page/p_1k6bm3k6od">App Promotion Campaigns</a>.</p>
+<p>I wanted to be able to identify problems and opportunities in every step of the funnel, so the pages were created as:</p>
+<ol>
+<li><code>Funnel Metrics</code> - where you can see the events, the conversions rates for each event and the price.</li>
+<li><code>Funnel Metrics by Week</code> - where you can add the time dimension to the funnel metrics.</li>
+<li><code>Cost Variation and Run Rate</code> - where you can see the cost variation (week over week) and the run rate (cost vs planned budget).</li>
+</ol>
+<p><br>
+The design/logic for each page is:</p>
+<ol>
+<li>
+<p>Home Page centralizing the pages and helping the navigation</p>
+</li>
+<li>
+<p>Pages</p>
+<ol>
+<li>Title and <code>Back Home</code> button to help navigation.</li>
+<li>Filter for dimensions at the top (with a button to remove filters).</li>
+<li>Scorecards with the main metrics for an overview.</li>
+<li>Groups of Metrics, grouped by selected dimension - advertiser, campaign name, etc. This works with an input from the user (parameter)</li>
+</ol>
+</li>
+</ol>
+<p><br>
+note: It doesn't look so polished because I did this dashboard quite fast. <br>
+note2: I know there are some data quality issues in the <code>csv</code>'s feeding the data, but please ignore it for now.</p>
+<hr />
+<h2 id="powerbi"><strong>PowerBI</strong></h2>
+<details open="open">
+<summary>PowerBI</summary>
+<p>The dashboard was created to monitor performance of facebook and instagram pages, both organic and paid marketing.
+There are many tabs in the dashboard, but they are not displayed here.
+The dashboard was built in 2018.</p>
+<p>I created the Extraction, Transformation, Loading and Visualization process from end to end.</p>
+<details class="info">
+<summary>Data Structure</summary>
+<p><img alt="powerbi1" src="powerbi1.png" /></p>
+</details>
+<p><strong>Daily Performance comparing current result to the month target and to the adjusted month target (proportional run rate)</strong>:</p>
+<details class="info">
+<summary>Example</summary>
+<p><img alt="powerbi2" src="powerbi2.png" /></p>
+</details>
+<p><strong>Metrics over time with filters</strong>:</p>
+<details class="info">
+<summary>Example</summary>
+<p><img alt="powerbi3" src="powerbi3.png" /></p>
+</details>
+</details>
+<hr />
+<h2 id="tableau"><strong>Tableau</strong></h2>
+<p>Unfortunately I don't have any image available to display right now.</p>
+<p>I worked 2 years using Tableau, and everything you saw on the PowerBI and Looker Studio sections I know how to do it Tableau, for example:</p>
 <ul>
-<li>Data Modeling and Entity Relationship Diagram</li>
-<li>Categorize users by number of devices</li>
-<li>Analyze sessions:<ul>
-<li>Users in different apps/games (or in multiple games)</li>
-<li>Last session for each user</li>
+<li>Connect to different data sources;</li>
+<li>Prepare and clean the data;</li>
+<li>Create visualizations with dimensions and measures, filters, groups, etc;</li>
+<li>Use calculations, functions, Level of Detail Expressions and Parameters;</li>
+<li>Create good dashboards using UX best practices.</li>
 </ul>
-</li>
-<li>Calculate cohort metrics:<ul>
-<li>Revenue (cohort size = month)</li>
-<li>Retention (cohort size = date)</li>
-<li>User's Cumulative Revenue from install_date to each activity_date</li>
-</ul>
-</li>
-</ul>
-<h2 id="problem-1-define-the-connections-between-the-described-tables-draw-an-erd">Problem 1: Define the connections between the described tables (draw an ERD)</h2>
-<details class="abstract">
-<summary>Input Tables</summary>
-<p><strong>users</strong> :a table holding the entire list of users, including the following columns:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">-</span> user_id, username, first_platform, first_install_date, first_cpn_id sessions_cnt, ltv
-</code></pre></div>
-
-<p><strong>devices</strong> – a table holding the list of devices and data on their apps installations, including the
-following columns:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">-</span> device_token, app_id, platform, idfa, gaid, lead_user_id, install_date, cpn_id
-</code></pre></div>
-
-<p><strong>apps</strong> – a table holding the different apps of the company, including the following columns:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">-</span> app_id, app_name, is_prod, release_date
-</code></pre></div>
-
-<p><strong>session_start</strong> – a table holding the events of starting a session in one of the apps, including the
-following columns:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">-</span> session_id, device_token, app_id, session_start_ts (timestamp)
-</code></pre></div>
-
-<p><strong>game_event</strong> – a table holding all the events performed by a user within the game/product, including
-the following columns:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="nx">event_id</span><span class="p">,</span><span class="w"> </span><span class="nx">device_token</span><span class="p">,</span><span class="w"> </span><span class="nx">app_id</span><span class="p">,</span><span class="w"> </span><span class="nx">event_type</span><span class="p">,</span><span class="w"> </span><span class="nx">event_name</span><span class="p">,</span><span class="w"> </span><span class="nx">event_ts</span>
-</code></pre></div>
-
-</details>
-<details class="success">
-<summary>Solution</summary>
-<p><img alt="chart_erd" src="image_erd.png" /></p>
-<p><strong>Primary Keys (PK) and Foreign Keys (FK)</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">-</span> Apparently ‘products’ and ‘users’ ‘session_start’ and ‘game_events’ tables have PKs,
-<span class="k">-</span> Devices has “device_token”, which at a first sight could look like a PK. However, since
-  “device_token” is not unique, it can’t be considered a PK.
-
-  It’s good practice to have a PK defined for every table, it helps with data integrity,
-  indexing, and maintaining relationships with other tables. If a table has no PK, there can
-  be difficulties when updating or deleting specific rows, and making querying the table
-  less efficient.
-
-<span class="k">-</span> Fields with ‘*’ represent assumed keys.
-</code></pre></div>
-
-<p><strong>Relationships</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">-</span> users table connects to devices table using a many-to-many relationship.
-<span class="k">-</span> devices table connects to session_start table using a one-to-many relationship.
-<span class="k">-</span> devices table connects to products table using a many-to-many relationship.
-<span class="k">-</span> devices table connects to game_events table using a one-to-many relationship.
-<span class="k">-</span> session_start table connects to products table using a many-to-one relationship.
-<span class="k">-</span> products table connects to game_events table using a one-to-many relationship.
-</code></pre></div>
-
-</details>
-<hr />
-<h2 id="problem-2-write-queries-that-answer-the-following-questions">Problem 2: Write queries that answer the following questions</h2>
-<p>2.1 Present the number of devices per user and add a category value from the following list:
-“single device”, “multiple devices”, “no device”</p>
-<details class="success">
-<summary>Solution</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span>
-<span class="w">    </span><span class="n">user_id</span><span class="p">,</span><span class="n">username</span><span class="p">,</span>
-<span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">device_token</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">devices</span><span class="p">,</span>
-<span class="w">    </span><span class="c1">-- create the category value</span>
-<span class="w">    </span><span class="k">CASE</span>
-<span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">device_token</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="ss">&quot;multiple devices&quot;</span>
-<span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">device_token</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="ss">&quot;single device&quot;</span>
-<span class="w">    </span><span class="k">ELSE</span><span class="w"> </span><span class="ss">&quot;no device&quot;</span>
-<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">category</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">u</span>
-<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">devices</span><span class="w"> </span><span class="n">d</span>
-<span class="k">ON</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">user_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">lead_user_id</span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">user_id</span><span class="p">,</span><span class="n">username</span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">user_id</span>
-</code></pre></div>
-<p>This solution ensures that all users will be displayed (even the “no device” ones) and includes the
-username.</p>
-<p>If we replace the LEFT JOIN (more resource intensive) we can improve the query performance,
-querying directly the “devices” table. The performance improvement comes with the cost of not having
-the username and not having the “no device” users, since they won’t appear in the “devices” table.</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-<span class="w">    </span><span class="n">lead_user_id</span><span class="p">,</span>
-<span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">device_token</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">devices</span><span class="p">,</span>
-<span class="w">    </span><span class="c1">-- create the category column</span>
-<span class="w">    </span><span class="k">CASE</span>
-<span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">device_token</span><span class="p">)</span><span class="o">=</span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;no device&#39;</span>
-<span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">device_token</span><span class="p">)</span><span class="o">=</span><span class="mi">1</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;single device&#39;</span>
-<span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">device_token</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;multiple devices&#39;</span>
-<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">device_category</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">devices</span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">lead_user_id</span>
-</code></pre></div>
-Testing both queries in the specific database environment being used is the best way to make an
-informed decision, considering both execution time and resource utilization.</p>
-</details>
-<p>2.2 Return a list of usernames that played (had sessions) in both of the following apps: “crazyrace”,
-“epicbattle”. (give 2 different ways)</p>
-<details class="success">
-<summary>Solution</summary>
-<p>Solution 1: Use Common Table Expressions (CTEs) to isolate devices
-associated with each game.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">-- create CTE to isolate devices per game</span>
-<span class="w">    </span><span class="k">WITH</span>
-<span class="w">    </span><span class="n">crazyrace_devices</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">device_token</span>
-<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">session_start</span>
-<span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">product_id</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;crazyrace&#39;</span><span class="p">),</span>
-
-<span class="w">    </span><span class="n">epicbattle_devices</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">device_token</span>
-<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">session_start</span>
-<span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">product_id</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;epicbattle&#39;</span><span class="p">),</span>
-
-<span class="w">    </span><span class="n">both_games_devices</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">crazyrace_devices</span>
-<span class="w">        </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">epicbattle_devices</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="p">(</span><span class="n">device_token</span><span class="p">))</span>
-
-<span class="w">    </span><span class="c1">-- Main Query</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">username</span>
-<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="n">u</span>
-<span class="w">    </span><span class="c1">-- filter only users that played both games</span>
-<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">user_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">lead_user_id</span>
-<span class="w">                        </span><span class="k">FROM</span><span class="w"> </span><span class="n">devices</span>
-<span class="w">                        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">device_token</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">device_token</span>
-<span class="w">                                                </span><span class="k">FROM</span><span class="w"> </span><span class="n">both_games_devices</span><span class="p">))</span>
-</code></pre></div>
-<p>Solution 2: Use SUBQUERIES and INTERSECT</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">username</span>
-<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span>
-<span class="w">    </span><span class="c1">-- filter crazyrace users</span>
-<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">user_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="n">lead_user_id</span>
-<span class="w">                        </span><span class="k">FROM</span><span class="w"> </span><span class="n">devices</span>
-<span class="w">                        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">device_token</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">device_token</span>
-<span class="w">                                                </span><span class="k">FROM</span><span class="w"> </span><span class="n">session_start</span>
-<span class="w">                                                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">product_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;crazyrace&#39;</span><span class="p">)</span>
-<span class="w">    </span><span class="p">)</span>
-<span class="w">    </span><span class="c1">-- get players of both games</span>
-<span class="w">    </span><span class="k">INTERSECT</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">username</span>
-<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span>
-<span class="w">    </span><span class="c1">-- filter epicbattle users</span>
-<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">user_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">lead_user_id</span>
-<span class="w">                       </span><span class="k">FROM</span><span class="w"> </span><span class="n">devices</span>
-<span class="w">                       </span><span class="k">WHERE</span><span class="w"> </span><span class="n">device_token</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">device_token</span>
-<span class="w">                                               </span><span class="k">FROM</span><span class="w"> </span><span class="n">session_start</span>
-<span class="w">                                               </span><span class="k">WHERE</span><span class="w"> </span><span class="n">product_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;epicbattle&#39;</span><span class="p">)</span>
-<span class="w">    </span><span class="p">);</span>
-</code></pre></div>
-</details>
-<p>2.3 What is the session_id of the last session per user? (the session_id‘s are not necessarily
-ascending according to the session start time)</p>
-<details class="success">
-<summary>Solution</summary>
-<div class="highlight"><pre><span></span><code><span class="k">WITH</span><span class="w"> </span><span class="n">RankSessions</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>
-<span class="cm">/* </span>
-<span class="cm">-- This CTE ranks sessions for each user and device-product combination based on the session start timestamp.</span>
-<span class="cm">-- It’s important to use device_id and product_id as joining keys together to ensure correct matching,</span>
-<span class="cm">   especially in cases where multiple games are played on the same device by different users.</span>
-<span class="cm">   For example, the device “ASG13DL” was used by “u1” to install “crazyrace” and “epicbattle”, and used by “u4” to install “golf-race”.</span>
-<span class="cm">-- It assigns a row number (rn) to each session, where the most recent session gets rn = 1.</span>
-<span class="cm">*/</span>
-
-<span class="k">SELECT</span>
-<span class="w">    </span><span class="n">u</span><span class="p">.</span><span class="n">user_id</span><span class="p">,</span>
-<span class="w">    </span><span class="n">u</span><span class="p">.</span><span class="n">username</span><span class="p">,</span>
-<span class="w">    </span><span class="n">d</span><span class="p">.</span><span class="n">device_token</span><span class="p">,</span>
-<span class="w">    </span><span class="n">d</span><span class="p">.</span><span class="n">product_id</span><span class="p">,</span>
-<span class="w">    </span><span class="n">s</span><span class="p">.</span><span class="n">session_id</span><span class="p">,</span>
-<span class="w">    </span><span class="n">s</span><span class="p">.</span><span class="n">session_start_ts</span><span class="p">,</span>
-<span class="w">    </span><span class="n">ROW_NUMBER</span><span class="p">()</span><span class="w"> </span><span class="n">OVER</span><span class="w"> </span><span class="p">(</span>
-<span class="w">        </span><span class="n">PARTITION</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">user_id</span><span class="w"> </span><span class="c1">-- to ensure ranking is done per user. Here we don’t use product_id because we focus on the latest session for each user regardless of the specific product.</span>
-<span class="w">        </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">session_start_ts</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="c1">-- to rank the latest session as 1</span>
-<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">rn</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">u</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">devices</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">user_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">lead_user_id</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">session_start</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">device_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">device_token</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">product_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">product_id</span>
-<span class="c1">-- If product_id is not used as key, the result will be wrong showing ‘s11’ for both ‘Oliver’ and ‘Sebastian’, because they shared the same device. Examining the data, the correct is ‘Sebastian’ playing ‘golf-race’(s11) and Oliver playing ‘crazyrace’ (s7) for their last sessions.</span>
-<span class="p">)</span>
-
-<span class="c1">-- Main Query</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">user_id</span><span class="p">,</span><span class="n">username</span><span class="p">,</span><span class="n">session_id</span><span class="p">,</span><span class="n">session_start_ts</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">RankSessions</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">rn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">-- Filter to only include the most recent session for each user</span>
-</code></pre></div>
-</details>
-<hr />
-<h2 id="problem-3-calculate-total-revenue-retention-cohort-analysis-and-cumulative-revenue-using-userscsv-and-user_activitiescsv">Problem 3: Calculate total revenue, retention cohort analysis and cumulative revenue using <code>users.csv</code> and <code>user_activities.csv</code></h2>
-<details class="abstract">
-<summary>Input Tables (samples)</summary>
-<p><strong>users</strong>:</p>
-<table>
-<thead>
-<tr>
-<th>user_id</th>
-<th>install_date</th>
-<th>country</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>abc123</td>
-<td>2023-11-17</td>
-<td>United States</td>
-</tr>
-<tr>
-<td>xyz999</td>
-<td>2023-11-05</td>
-<td>Germany</td>
-</tr>
-<tr>
-<td>qwe777</td>
-<td>2023-09-28</td>
-<td>Spain</td>
-</tr>
-</tbody>
-</table>
-<p><strong>user_activities</strong>:</p>
-<table>
-<thead>
-<tr>
-<th>user_id</th>
-<th>install_date</th>
-<th>country</th>
-<th>activity_date</th>
-<th>revenue</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>XkiSoEK5f4tyE2ZIOWRs1A==</td>
-<td>2024-03-03</td>
-<td>Indonesia</td>
-<td>2024-03-03</td>
-<td>0.00065617357790376837</td>
-</tr>
-<tr>
-<td>UiR+iATpDo8DcYehle/EPw==</td>
-<td>2024-03-03</td>
-<td>Germany</td>
-<td>2024-03-03</td>
-<td>0.11618769868339844</td>
-</tr>
-<tr>
-<td>g18jNkYM+fIfzjNkxIxhuQ==</td>
-<td>2024-03-02</td>
-<td>Hong Kong</td>
-<td>2024-03-03</td>
-<td>0.013600176580795429</td>
-</tr>
-</tbody>
-</table>
-</details>
-<p>3.1 Write an SQL query to retrieve the total revenue generated by users who signed up in 2023, grouped by month.</p>
-<details class="success">
-<summary>Solution</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-<span class="w">    </span><span class="k">EXTRACT</span><span class="p">(</span><span class="k">YEAR</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">activity_date</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">year</span><span class="p">,</span>
-<span class="w">    </span><span class="k">EXTRACT</span><span class="p">(</span><span class="k">MONTH</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">activity_date</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">month</span><span class="p">,</span>
-<span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">revenue</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_revenue</span>
-<span class="k">FROM</span>
-<span class="w">    </span><span class="o">`</span><span class="n">user_activities</span><span class="o">`</span><span class="w"> </span><span class="n">a</span>
-<span class="k">JOIN</span>
-<span class="w">    </span><span class="o">`</span><span class="n">users</span><span class="o">`</span><span class="w"> </span><span class="n">u</span>
-<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">user_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">user_id</span>
-<span class="k">WHERE</span>
-<span class="w">    </span><span class="k">EXTRACT</span><span class="p">(</span><span class="k">YEAR</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">install_date</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2023</span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span>
-<span class="w">    </span><span class="k">year</span><span class="p">,</span><span class="w"> </span><span class="k">month</span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span>
-<span class="w">    </span><span class="k">year</span><span class="p">,</span><span class="w"> </span><span class="k">month</span><span class="p">;</span>
-</code></pre></div>
-<p>output:</p>
-<p><img alt="query31" src="query_output_revenue.png" /></p>
-</details>
-<p>3.2 Using the SQL database, perform a retention cohort analysis to understand user retention over time.</p>
-<details class="success">
-<summary>Solution</summary>
-<div class="highlight"><pre><span></span><code><span class="k">WITH</span><span class="w"> </span><span class="n">user_activities</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>
-
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">user_id</span><span class="p">,</span>
-<span class="w">        </span><span class="n">u</span><span class="p">.</span><span class="n">install_date</span><span class="p">,</span>
-<span class="w">        </span><span class="n">a</span><span class="p">.</span><span class="n">activity_date</span><span class="p">,</span>
-<span class="w">        </span><span class="n">DATE_DIFF</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">activity_date</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">install_date</span><span class="p">,</span><span class="w"> </span><span class="k">DAY</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">days_since_install</span>
-<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">user_activities</span><span class="w"> </span><span class="n">a</span>
-<span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="n">u</span>
-<span class="w">        </span><span class="k">ON</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">user_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">user_id</span>
-<span class="p">),</span>
-
-<span class="n">cohort_sizes</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">install_date</span><span class="p">,</span>
-<span class="w">        </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">user_id</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">cohort_size</span>
-<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span>
-<span class="w">    </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">install_date</span>
-<span class="p">),</span>
-
-<span class="n">active_users</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w">  </span><span class="n">install_date</span><span class="p">,</span>
-<span class="w">            </span><span class="n">days_since_install</span><span class="p">,</span>
-<span class="w">            </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">user_id</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">active_users</span>
-<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">user_activities</span>
-<span class="w">    </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">install_date</span><span class="p">,</span><span class="w"> </span><span class="n">days_since_install</span>
-<span class="p">)</span>
-<span class="k">SELECT</span>
-<span class="w">    </span><span class="n">au</span><span class="p">.</span><span class="n">install_date</span><span class="p">,</span>
-<span class="w">    </span><span class="n">au</span><span class="p">.</span><span class="n">days_since_install</span><span class="p">,</span>
-<span class="w">    </span><span class="n">cs</span><span class="p">.</span><span class="n">cohort_size</span><span class="p">,</span>
-<span class="w">    </span><span class="n">au</span><span class="p">.</span><span class="n">active_users</span><span class="p">,</span>
-<span class="w">    </span><span class="n">ROUND</span><span class="p">((</span><span class="n">au</span><span class="p">.</span><span class="n">active_users</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">cs</span><span class="p">.</span><span class="n">cohort_size</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">retention_rate_percentage</span>
-<span class="k">FROM</span>
-<span class="w">    </span><span class="n">active_users</span><span class="w"> </span><span class="n">au</span>
-<span class="k">JOIN</span>
-<span class="w">    </span><span class="n">cohort_sizes</span><span class="w"> </span><span class="n">cs</span>
-<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">au</span><span class="p">.</span><span class="n">install_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cs</span><span class="p">.</span><span class="n">install_date</span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span>
-<span class="w">    </span><span class="n">au</span><span class="p">.</span><span class="n">install_date</span><span class="p">,</span>
-<span class="w">    </span><span class="n">au</span><span class="p">.</span><span class="n">days_since_install</span><span class="p">;</span>
-</code></pre></div>
-<p>output:</p>
-<p><img alt="query32" src="query32.png" /></p>
-</details>
-<p>3.3 Calculate the cumulative revenue for each user up to each activity date and rank the activities of each user by activity date and show the cumulative revenue.</p>
-<details class="success">
-<summary>Solution</summary>
-<p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-<span class="w">    </span><span class="n">a</span><span class="p">.</span><span class="n">user_id</span><span class="p">,</span>
-<span class="w">    </span><span class="n">a</span><span class="p">.</span><span class="n">activity_date</span><span class="p">,</span>
-<span class="w">    </span><span class="n">u</span><span class="p">.</span><span class="n">install_date</span><span class="p">,</span>
-<span class="w">    </span><span class="n">a</span><span class="p">.</span><span class="n">revenue</span><span class="p">,</span>
-<span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">revenue</span><span class="p">)</span><span class="w"> </span><span class="n">OVER</span><span class="w"> </span><span class="p">(</span><span class="n">PARTITION</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">user_id</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">activity_date</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">cumulative_revenue</span><span class="p">,</span>
-<span class="w">    </span><span class="n">ROW_NUMBER</span><span class="p">()</span><span class="w"> </span><span class="n">OVER</span><span class="w"> </span><span class="p">(</span><span class="n">PARTITION</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">user_id</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">activity_date</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">activity_rank</span><span class="p">,</span>
-<span class="w">    </span><span class="n">DATE_DIFF</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">activity_date</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">install_date</span><span class="p">,</span><span class="w"> </span><span class="k">DAY</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">days_since_install</span>
-<span class="k">FROM</span>
-<span class="w">    </span><span class="n">user_activities</span><span class="w"> </span><span class="n">a</span>
-<span class="k">JOIN</span>
-<span class="w">    </span><span class="n">users</span><span class="w"> </span><span class="n">u</span>
-<span class="k">ON</span>
-<span class="w">    </span><span class="n">a</span><span class="p">.</span><span class="n">user_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">user_id</span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span>
-<span class="w">    </span><span class="n">a</span><span class="p">.</span><span class="n">user_id</span><span class="p">,</span>
-<span class="w">    </span><span class="n">a</span><span class="p">.</span><span class="n">activity_date</span><span class="p">;</span>
-</code></pre></div>
-output:</p>
-<p><img alt="query33" src="query33.png" /></p>
-</details>
 <hr />
 <h2 id="navigation">Navigation</h2>
 <p><a href="../../">Previous: Home</a></p>
